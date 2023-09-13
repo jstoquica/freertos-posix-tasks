@@ -7,6 +7,7 @@ TaskHandle_t Task1_Handle;
 TaskHandle_t Task2_Handle;
 
 // Function that represents the first task
+//Teste
 void Task1(void *pvParameters) {
     for (;;)
     {
