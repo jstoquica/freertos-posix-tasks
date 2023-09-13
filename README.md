@@ -7,7 +7,7 @@ O FreeRTOS é um simulador de kernel open source, usado para aplicações em tem
 
 ***Pré requisitos***
 
-- Ter o FreeRTOS instalado como uma variável de ambiente
+- Ter o FreeRTOS instalado como uma variável de ambiente: <a href="https://www.freertos.org/a00104.html"> Download FreeRTOS</a>
 - ter o GCC instalado
 
 **para compilar utilize o comando abaixo**
