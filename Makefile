@@ -2,7 +2,7 @@
 # Based on /opt/optsync/FreeRTOS/FreeRTOS/Demo/Posix_GCC/Makefile
 
 CC := gcc
-BIN := tasks-posix-c
+BIN := modelo-posix-gcc
 
 BUILD_DIR := build
 
@@ -16,7 +16,7 @@ INCLUDE_DIRS := -I./include
 INCLUDE_DIRS += -I${FREERTOS_DIR}/Source/include
 INCLUDE_DIRS += -I${FREERTOS_DIR}/Source/portable/ThirdParty/GCC/Posix
 
-SOURCE_FILES := $(wildcard ./*.c)
+SOURCE_FILES := $(wildcard ./src/*.c)
 SOURCE_FILES += ${FREERTOS_DIR}/Source/tasks.c
 SOURCE_FILES += ${FREERTOS_DIR}/Source/queue.c
 SOURCE_FILES += ${FREERTOS_DIR}/Source/list.c

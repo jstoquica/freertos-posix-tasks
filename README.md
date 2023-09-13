@@ -1,17 +1,33 @@
-# Implementação do Kernel FreeRTOS baseado em POSIX
+# tasks-FreeRTOS-Linux
 
-A aplicação implementa a manipulação de tarefas baseadas no Kernel do FreeRTOS baseado em POSIX para a introdução dos alunos da disciplina de Sistemas Embarcados da Universidade Federal do Ceará (UFC).
+## Resumo
+O FreeRTOS é um simulador de kernel open source, usado para aplicações em tempo real. Esse projeto simula a criação de 4 tasks, que são equivalentes a threads. A função que executa a task 3 é utilizada para suspender a execução dela mesma. A função vTaskSuspend() é utilizada para fazer essa interrupção, para que as tasks voltem a rodar em loop se deve utilizar a função vTaskResume(), isso é o que ocorre dentro do loop for da task 2, nessa função há um contador i, o contador é iniciado em 0, e incrementa a cada vez que o a task 2 é executada pelo kernel. Quando o contador i chega em 2 a task 3 volta a ser eecutada por mais uma vez. Quando o contador i receber 6 como valor de variável será executada a task 4, que encerra o kernel.
 
-### 1. Incluir o path do FreeRTOS na distro Linux (Ubuntu 22.04 LTS)
+## Compilando e executanto
 
-`$ export FREERTOS_PATH=~/Documents/FreeRTOSv202212.01`
+***Pré requisitos***
 
-`$ echo $FREERTOS_PATH`
+- Ter o FreeRTOS instalado como uma variável de ambiente
+- ter o GCC instalado
 
-## 2. Compilar com CLANG o Makefile
+**para compilar utilize o comando abaixo**
 
-`$ make CC=clang`
+```bash
+make
+```
 
-## 3. Executar o build
+Ao fazer isso será gerada uma nova pasta chamada *build*. Dentro dessa pasta será gerado um arquivo chamado *modelo-posix-gcc*
 
-`$ ./build/tasks-posix-c`
+**Para executar utilize**
+
+```bash
+./modelo-posix-gcc
+```
+
+### Autor
+Jônatas Fernandes
+
+#### Referência
+```bash
+https://youtu.be/wZmXPj1YvBg?si=-CDg9VBKjG4tUGgU
+```
