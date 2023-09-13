@@ -15,3 +15,5 @@ A aplicação implementa a manipulação de tarefas baseadas no Kernel do FreeRT
 ## 3. Executar o build
 
 `$ ./build/tasks-posix-c`
+
+## Done!
